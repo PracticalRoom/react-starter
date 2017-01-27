@@ -5,7 +5,7 @@ const webpack = require('webpack');
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  entry: './javascript/app',
+  entry: './javascripts/app',
   output: {
     filename: `app${isProduction ? '.[hash]' : ''}.js`,
     path: './dist/server/public/assets',
