@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+const app = require('../dist/server').default;
+
+const {PORT} = process.env;
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
+})

@@ -10,7 +10,7 @@
     <% }) %>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"><div>{{ content|safe }}</div></div>
     <% htmlWebpackPlugin.files.js.forEach(filepath => { %>
     <script src="/<%= filepath %>"></script>
     <% }) %>

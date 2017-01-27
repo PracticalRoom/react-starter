@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/javascript/app',
   output: {
     filename: `app${isProduction ? '.[hash]' : ''}.js`,
-    path: './dist/assets',
+    path: './dist/server/public/assets',
     publicPath: 'assets'
   },
   devtool: 'source-map',
@@ -31,9 +31,9 @@ module.exports = {
     }),
     new ExtractTextPlugin(`app${isProduction ? '.[hash]' : ''}.css`),
     new HtmlPlugin({
-      filename: '../index.html',
+      filename: '../../views/react-app.html',
       inject: false,
-      template: './src/views/index.html'
+      template: './src/server/views/react-app.html'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

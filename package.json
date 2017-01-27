@@ -1,18 +1,22 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run clean && npm run frontend",
+    "build": "npm run clean && npm run frontend && npm run server",
     "clean": "rm -rf dist",
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
-    "serve": "http-server dist -p 8080"
+    "serve": "http-server dist -p 8080",
+    "server": "babel src --out-dir dist"
   },
   "dependencies": {
+    "express": "4.14.0",
     "react": "15.4.2",
-    "react-dom": "15.4.2"
+    "react-dom": "15.4.2",
+    "swig": "1.4.2"
   },
   "devDependencies": {
     "autoprefixer": "6.7.0",
+    "babel-cli": "6.22.2",
     "babel-core": "6.22.1",
     "babel-loader": "6.2.10",
     "babel-preset-env": "1.1.8",
