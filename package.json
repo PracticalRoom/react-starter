@@ -6,7 +6,7 @@
     "develop": "concurrently 'npm run frontend/watch' 'npm run server/watch'",
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
-    "server": "babel src --out-dir dist --source-maps",
+    "server": "babel app --out-dir dist --source-maps",
     "server/watch": "npm run server -- --watch",
     "start": "node bin/start",
     "start/watch": "nodemon bin/start --watch dist --ignore dist/server/public"

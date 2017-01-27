@@ -33,7 +33,7 @@ module.exports = {
     new HtmlPlugin({
       filename: '../../views/react-app.html',
       inject: false,
-      template: './src/server/views/react-app.html'
+      template: './app/server/views/react-app.html'
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
