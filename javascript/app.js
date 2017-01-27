@@ -6,10 +6,12 @@ import {Provider} from 'react-redux';
 import configureStore from '../app/store';
 import {render} from 'react-dom';
 import routes from '../app/routes';
+import {syncHistoryWithStore} from 'react-router-redux';
 
-const store = configureStore()
+const store = configureStore({history: browserHistory, initialState: window.initialState})
+const history = syncHistoryWithStore(browserHistory, store)
 
-match({history: browserHistory, routes}, (error, redirectLocation, renderProps) => {
+match({history, routes}, (error, redirectLocation, renderProps) => {
   if (error) {
     throw error;
   }

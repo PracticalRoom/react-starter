@@ -5,10 +5,13 @@ import React from 'react';
 import configureStore from '../../store';
 import {renderToString} from 'react-dom/server';
 import routes from '../../routes';
+import serialize from 'serialize-javascript'
+import {syncHistoryWithStore} from 'react-router-redux';
 
 export default function reactApp (req, res) {
-  const history = createMemoryHistory(req.url);
-  const store = configureStore();
+  const memoryHistory = createMemoryHistory(req.url);
+  const store = configureStore({history: memoryHistory});
+  const history = syncHistoryWithStore(memoryHistory, store)
 
   match({history, routes}, (error, redirectLocation, renderProps) => {
     if (error) {
@@ -24,7 +27,10 @@ export default function reactApp (req, res) {
       );
 
       res.render('react-app', {
-        content
+        content,
+        initialState: serialize(
+          store.getState()
+        )
       })
     }
   });
