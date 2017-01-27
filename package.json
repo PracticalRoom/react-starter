@@ -6,7 +6,7 @@
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
     "serve": "http-server dist -p 8080",
-    "server": "babel src --out-dir dist"
+    "server": "babel src --out-dir dist --source-maps"
   },
   "dependencies": {
     "express": "4.14.0",
@@ -28,6 +28,7 @@
     "node-sass": "4.3.0",
     "postcss-loader": "1.2.2",
     "sass-loader": "4.1.1",
+    "source-map-support": "0.4.11",
     "style-loader": "0.13.1",
     "webpack": "1.14.0"
   }
