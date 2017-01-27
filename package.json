@@ -7,7 +7,9 @@
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
     "server": "babel src --out-dir dist --source-maps",
-    "server/watch": "npm run server -- --watch"
+    "server/watch": "npm run server -- --watch",
+    "start": "node bin/start",
+    "start/watch": "nodemon bin/start --watch dist --ignore dist/server/public"
   },
   "dependencies": {
     "express": "4.14.0",
@@ -28,6 +30,7 @@
     "extract-text-webpack-plugin": "1.0.1",
     "html-webpack-plugin": "2.26.0",
     "node-sass": "4.3.0",
+    "nodemon": "1.11.0",
     "postcss-loader": "1.2.2",
     "sass-loader": "4.1.1",
     "source-map-support": "0.4.11",
