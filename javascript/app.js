@@ -1,6 +1,6 @@
-import '../styles/app.scss';
+import '../src/styles/app.scss';
 
-import Application from '../components/application';
+import Application from '../src/components/application';
 import React from 'react';
 import {render} from 'react-dom';
 
