@@ -3,6 +3,7 @@
   "scripts": {
     "build": "npm run clean && npm run frontend && npm run server",
     "clean": "rm -rf dist",
+    "develop": "concurrently 'npm run frontend/watch' 'npm run server/watch'",
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
     "server": "babel src --out-dir dist --source-maps",
@@ -21,6 +22,7 @@
     "babel-loader": "6.2.10",
     "babel-preset-env": "1.1.8",
     "babel-preset-react": "6.22.0",
+    "concurrently": "3.1.0",
     "css-loader": "0.26.1",
     "dotenv": "4.0.0",
     "extract-text-webpack-plugin": "1.0.1",
