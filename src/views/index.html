@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React Starter / Underdog.io</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <% htmlWebpackPlugin.files.css.forEach(filepath => { %>
+    <link rel="stylesheet" href="/<%= filepath %>" />
+    <% }) %>
+  </head>
+  <body>
+    <div id="app"></div>
+    <% htmlWebpackPlugin.files.js.forEach(filepath => { %>
+    <script src="/<%= filepath %>"></script>
+    <% }) %>
+  </body>
+</html>

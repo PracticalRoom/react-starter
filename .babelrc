@@ -1,0 +1,11 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["> 5% in US"],
+        "node": "current"
+      }
+    }],
+    "react"
+  ]
+}
