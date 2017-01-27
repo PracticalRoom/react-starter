@@ -20,7 +20,7 @@ module.exports = {
     }, {
       test: /\.scss/,
       exclude: /node_modules/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap&import=false&url=false' + '!sass-loader')
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap&import=false&url=false' + '!postcss-loader' + '!sass-loader')
     }]
   },
   plugins: [
