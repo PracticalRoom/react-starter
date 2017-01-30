@@ -6,7 +6,7 @@
     "develop": "concurrently 'npm run frontend/watch' 'npm run server/watch'",
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
-    "lint": "eslint app test",
+    "lint": "eslint javascripts app test",
     "mocha": "mocha --compilers babel-register --reporter dot --recursive",
     "server": "babel app --out-dir dist --source-maps",
     "server/watch": "npm run server -- --watch",
