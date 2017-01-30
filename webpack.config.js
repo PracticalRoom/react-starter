@@ -1,3 +1,4 @@
+/* eslint-disable */
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
@@ -67,3 +68,4 @@ module.exports = {
     ]
   }
 };
+/* eslint-enable */
