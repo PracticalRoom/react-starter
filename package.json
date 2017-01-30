@@ -7,11 +7,12 @@
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
     "lint": "eslint app test",
+    "mocha": "mocha --compilers babel-register --reporter dot --recursive",
     "server": "babel app --out-dir dist --source-maps",
     "server/watch": "npm run server -- --watch",
     "start": "node bin/start",
     "start/watch": "nodemon bin/start --watch dist --ignore dist/server/public",
-    "test": "mocha --compilers babel-register --reporter dot --recursive",
+    "test": "npm run lint && npm run mocha",
     "test/watch": "npm test -- --watch"
   },
   "dependencies": {
