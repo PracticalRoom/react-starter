@@ -7,7 +7,7 @@
     "frontend": "webpack",
     "frontend/watch": "webpack --watch",
     "lint": "eslint javascripts app test",
-    "mocha": "mocha --compilers babel-register --require babel-polyfill --reporter dot --recursive",
+    "mocha": "mocha --compilers babel-register --require babel-polyfill --require test/utils/config --reporter dot --recursive",
     "server": "babel app --out-dir dist --source-maps",
     "server/watch": "npm run server -- --watch",
     "start": "node bin/start",
