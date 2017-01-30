@@ -14,6 +14,6 @@ app.set('view engine', 'html');
 
 app.use(express.static(join(__dirname, 'public')));
 
-app.use('*', reactApp);
+app.use(reactApp);
 
 export default app;
