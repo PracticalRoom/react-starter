@@ -6,4 +6,4 @@ export default function Home () {
       <h1>React Starter / Underdog.io</h1>
     </div>
   );
-};
+}

@@ -7,5 +7,5 @@ describe('Rendering a <Home /> route', function () {
   it('renders text', function () {
     const wrapper = shallow(<Home />);
     expect(wrapper.text()).toContain('React Starter / Underdog.io');
-  })
+  });
 });
