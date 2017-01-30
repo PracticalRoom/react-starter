@@ -1,0 +1,7 @@
+{
+  "extends": "underdog/react",
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
