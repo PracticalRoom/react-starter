@@ -13,7 +13,7 @@
     "start": "node bin/start",
     "start/watch": "nodemon bin/start --watch dist --ignore dist/server/public",
     "test": "npm run lint && npm run mocha",
-    "test/watch": "npm test -- --watch"
+    "test/watch": "npm run mocha -- --watch"
   },
   "dependencies": {
     "express": "4.14.0",
